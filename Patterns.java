@@ -27,7 +27,9 @@ number = sc.nextInt();
 // quest17(number);
 // quest18(number);
 // quest19(number, chr);
-quest20(number, chr);
+// quest20(number, chr);
+// quest21(number, chr);
+quest22(number);
 
 }
  
@@ -406,7 +408,90 @@ static void quest19(int number, char chr){
 
 static void quest20(int number, char chr){
     
+    // input is the number of rows per increasing or decreasing
     
+    // increasing
+    
+    // for rows
+    for (int i=1;i<=number;i++){
+        
+        // print chars
+        for (int j=1;j<=i;j++){
+            System.out.print(chr);
+        }
+        
+        // print spaces
+        for (int j=1;j<=2*(number-i);j++){
+            System.out.print(" ");
+        }
+        
+        // print chars again
+        for (int j=1;j<=i;j++){
+            System.out.print(chr);
+        }
+        
+        System.out.println(" ");
+    }
+    
+    
+    //decreasing
+    for (int i=1;i<number;i++){
+        // print chars
+        for (int j=1;j<=(number-i);j++){
+            System.out.print(chr);
+        }
+        
+        // print spaces
+        for (int j=1;j<=2*i;j++){
+            System.out.print(" ");
+        }
+        
+        //print chars again
+        for (int j=1;j<=(number-i);j++){
+            System.out.print(chr);
+        }
+        
+        System.out.println("");
+        
+    }
+    
+}
+
+static void quest21(int number, char chr){
+    
+    for (int i=1;i<=number;i++){
+        
+        if ((i==1) || (i==number)){
+            
+            for (int j=1;j<=number;j++){
+                System.out.print(chr);
+            }
+        }
+        else{
+            System.out.print(chr);
+            // print spaces
+            for (int j=1;j<=number-2;j++){
+                System.out.print(" ");
+            }
+            
+            System.out.print(chr);
+        }
+        
+        System.out.println(" ");
+    }
+    
+}
+
+static void quest22(int number){
+    
+    // input is the number in the first entire row
+    // grid is (n-1)*(n-1)
+    
+    // decreasing
+    
+    
+    
+    // increasing
 }
  
 
